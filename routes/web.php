@@ -15,26 +15,35 @@ Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
+Route::get('logout',function ()
+{
+	Auth::logout();
+	return redirect(url('/'));
+});
+
 Route::get('/home', 'HomeController@home')->name('home');
 
-Route::prefix('cabang')->group(function () {
 
+
+Route::group(['prefix' => 'cabang'] , function () {
+Route::group(['middleware' => 'admin'], function()
+{
 	Route::get('', function () {
 		return view('admin.cabang.index');
-	});
-
-	Route::get('add', function () {
-		return view('admin.cabang.add');
-	});
+		});
+	Route::get('add' , 'Auth\Cabang\BranchController@add');
 
 	Route::get('edit', function () {
 		return view('admin.cabang.edit');
+		});
+
 	});
 
 });
 
-Route::prefix('produk')->group(function () {
-
+Route::group(['prefix' => 'produk'] , function () {
+Route::group(['middleware' => 'admin'], function()
+{
 	Route::get('', function () {
 		return view('admin.produk.index');
 	});
@@ -46,31 +55,13 @@ Route::prefix('produk')->group(function () {
 	Route::get('edit', function () {
 		return view('admin.produk.edit');
 	});
-
-});
-
-Route::prefix('kasir')->group(function () {
-
-	Route::get('', function () {
-		return view('kasir.index');
-	});
-
-	Route::get('add', function () {
-		return view('kasir.pembayaran.index');
-	});
-
-	Route::get('edit', function () {
-		return view('kasir.laporan.index');
 	});
 
 });
 
-Route::get('profile', function () {
-	return view('admin.profile.index');
-});
-
-Route::prefix('user')->group(function () {
-
+Route::group(['prefix' => 'user'] , function () {
+Route::group(['middleware' => 'admin'], function()
+{
 	Route::get('', function () {
 		return view('admin.user.index');
 	});
@@ -82,5 +73,7 @@ Route::prefix('user')->group(function () {
 	Route::get('edit', function () {
 		return view('admin.user.edit');
 	});
+	});
 
-});///
+});
+

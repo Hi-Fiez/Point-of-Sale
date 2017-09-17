@@ -43,19 +43,19 @@
                                         <div class="form-group">
                                             <label for="alamat" class="col-sm-3 control-label">Alamat</label>
                                             <div class="col-sm-9">
-                                                <textarea name="alamat" type="text" class="form-control" id="alamat" placeholder="Alamat"></textarea>
+                                                <textarea name="alamat" type="text" class="form-control" id="alamat" placeholder="Alamat" required></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="kota" class="col-sm-3 control-label">Kota</label>
                                             <div class="col-sm-9">
-                                                <input name="kota" type="text" class="form-control" id="kota" placeholder="Kota">
+                                                <input name="kota" type="text" class="form-control" id="kota" placeholder="Kota" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="provinsi" class="col-sm-3 control-label">Provinsi</label>
                                             <div class="col-sm-9">
-                                                <input name="provinsi" type="text" class="form-control" id="provinsi" placeholder="Provinsi">
+                                                <input name="provinsi" type="text" class="form-control" id="provinsi" placeholder="Provinsi" required>
                                             </div>
                                         </div>
                                     </div>
@@ -64,25 +64,31 @@
                                             <br>
                                             <label for="kode_pos" class="col-sm-3 control-label">Kode Pos</label>
                                             <div class="col-sm-9">
-                                                <input name="kode_pos" type="text" class="form-control" id="kode_pos" placeholder="Kode Pos">
+                                                <input name="kode_pos" type="text" class="form-control" id="kode_pos" placeholder="Kode Pos" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="telepon" class="col-sm-3 control-label">Telepon</label>
                                             <div class="col-sm-9">
-                                                <input name="telepon" type="text" class="form-control" id="telepon" placeholder="Telepon">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="pesawat" class="col-sm-3 control-label">Pesawat</label>
-                                            <div class="col-sm-9">
-                                                <input name="pesawat" type="text" class="form-control" id="kota" placeholder="Pesawat">
+                                                <input name="telepon" type="text" class="form-control" id="telepon" placeholder="Telepon" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="fax" class="col-sm-3 control-label">Fax</label>
                                             <div class="col-sm-9">
-                                                <input name="fax" type="text" class="form-control" id="fax" placeholder="Fax">
+                                                <input name="fax" type="text" class="form-control" id="fax" placeholder="Fax" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="fax" class="col-sm-3 control-label">Bank</label>
+                                            <div class="col-sm-9">
+                                                <select required>
+                                                    <option disabled="true" selected>Pilih Satu
+                                                    </option>
+                                                    @foreach($bank as $key)
+                                                    <option>{{$key->nama_bank}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
