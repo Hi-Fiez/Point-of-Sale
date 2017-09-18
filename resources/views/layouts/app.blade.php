@@ -28,6 +28,7 @@
     line-height: 1.7em;
     color: #7f8c8d;
     font-size: 13px;
+    overflow-x:hidden;
 }
 
 /*
@@ -210,7 +211,7 @@
             </div>
         </div>
 
-        <div style="padding-left: 10px; padding-right: 10px;">
+        <div style="padding-left: 15px; padding-right: 5px;">
             @yield('content')
         </div>
 

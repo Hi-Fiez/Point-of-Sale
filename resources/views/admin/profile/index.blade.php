@@ -66,21 +66,6 @@
                                     <input name="foto" type="file" id="foto" placeholder="Foto" onchange="readURL(this);">
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <div class="col-sm-5">
-
-                                    <!-- at.if.kalo.foto.kosong -->
-                                    <!-- <img id="imgfoto"  src="{!! asset('foto/profil/profil->foto') !!}" /> -->
-                                    <img class="pure-img" id="imgfoto" src="https://www.google.co.id/logos/doodles/2017/samuel-johnsons-308th-birthday-5999730113904640.2-law.gif">
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
                             <div class="form-group">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <label for="tanggal_lahir" class="col-sm-3 control-label"></label>
@@ -90,13 +75,21 @@
                                 <div class="col-sm-2">
                                     <a href="{!! url('pengaturan/profil') !!}" class="btn btn-danger btn-block">Cancel</a>
                                 </div>
-                            </div>
+                            </div>                            
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- at.if.kalo.foto.kosong -->
+                                <!-- <img id="imgfoto"  src="{!! asset('foto/profil/profil->foto') !!}" /> --><center>
+                                <img class="pure-img" id="imgfoto" src="https://www.google.co.id/logos/doodles/2017/samuel-johnsons-308th-birthday-5999730113904640.2-law.gif">
+                            </center>
                         </div>
                     </div>
-                </form>
-            </div>
-        </section>
-    </div>
+                </div>                    
+            </form>
+        </div>
+    </section>
+</div>
 </div>
 
 <script>
