@@ -232,7 +232,7 @@
 </div>
 </nav> -->
 
-<div class="header">
+<div class="header" style="padding-bottom: 70px;">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
         <a class="pure-menu-heading" href="">Your Site</a>
 
