@@ -1,20 +1,17 @@
-@extends('layouts.guest')
+<style>
+    .lightbox {
 
-@section('content')
-<body>
-    <style>
-        .lightbox {
-
-            border: 20px solid rgba(0, 0, 0, 0.2);
-        }
-        body{
-            margin:0;
-            background-color:#FFF;
-        }
-    </style>
+        border: 20px solid rgba(0, 0, 0, 0.2);
+    }
+    body{
+        margin:0;
+        background-color:#FFF;
+    }
+</style>
+<body>    
 </body>
-<body id="">
-    <div style="background: #369;width:100%;height:120px"></div>
+<body id="app">
+    <div style="background: #369;width:100%;height:20%;"></div>
     <div style="background: #E0E0E0;width:100%;height:648px"></div>
     <div class="lightbox" style="background: #ecf0f1;position: absolute;height:1000px;width:93%;margin-top:-50%;margin-left: 3.5%;">
         <div style="width:100%; height:100%; overflow:auto; margin: 0 auto; position:absolute; 
@@ -108,10 +105,10 @@
             <form action="{{ url('pos/ubah/qty/enter')  }}" method="get" id="formqty">
                 <div id="1nya" style="width:90.3%;position:absolute;margin-left:4.1%;margin-top:3%">
 
-                 <div class="x_panel" style="position:absolute;background:#369;margin-top:25%">
+                   <div class="x_panel" style="position:absolute;background:#369;margin-top:25%">
                     <div id="table-scroll">
                         <table  class="table" style="width:100%;position:relative;background:white;">
-                           <thead>
+                         <thead>
                             <tr style="background:#3498db; color: white; font-size:20px;">
                                 <td align="center">Produk</td>
                                 <td align="center">Qty</td>
@@ -133,16 +130,16 @@
                                 <td align="center" style="cursor:pointer" onclick="pilih(value->barcode,$value->qty )">Rp.  number_format(value->harga ,2,",",".") </td>
                                 <td align="center" style="cursor:pointer" onclick="pilih(value->barcode , value->qty)">Rp.  number_format(value->sub_total ,2,",",".") </td>
                                 <td align="center">
-                                   <button type="button" onclick="konfirm(value->id)" style="margin-top:0;width:50px;height:20px;background:red;font-size:15px;color:#FFF;border:none;" class="mif-bin"></button>
-                               </td>
-                           </tr>
+                                 <button type="button" onclick="konfirm(value->id)" style="margin-top:0;width:50px;height:20px;background:red;font-size:15px;color:#FFF;border:none;" class="mif-bin"></button>
+                             </td>
+                         </tr>
 
-                       </tbody>
-                   </table>
-               </div>
-           </div>
-       </div>
-   </form>
+                     </tbody>
+                 </table>
+             </div>
+         </div>
+     </div>
+ </form>
 </div>
 
 </div>
@@ -741,4 +738,3 @@ $(function(){
     });
 });
 </script>
-@endsection
