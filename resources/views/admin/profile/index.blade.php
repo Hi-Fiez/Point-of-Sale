@@ -73,7 +73,7 @@
 
                                     <!-- at.if.kalo.foto.kosong -->
                                     <!-- <img id="imgfoto"  src="{!! asset('foto/profil/profil->foto') !!}" /> -->
-                                    <img id="imgfoto" src="https://www.google.co.id/logos/doodles/2017/samuel-johnsons-308th-birthday-5999730113904640.2-law.gif">
+                                    <img class="pure-img" id="imgfoto" src="https://www.google.co.id/logos/doodles/2017/samuel-johnsons-308th-birthday-5999730113904640.2-law.gif">
                                     
                                 </div>
                             </div>
@@ -107,7 +107,8 @@
             reader.onload = function (e) {
                 $('#imgfoto')
                 .attr('src', e.target.result)
-                .width(600);
+                .width(300)
+                .height(300);
             };
 
             reader.readAsDataURL(input.files[0]);

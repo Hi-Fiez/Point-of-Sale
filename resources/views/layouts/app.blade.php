@@ -129,89 +129,94 @@
 <body>
     <div id="app">     
         <div class="header" style="padding-bottom: 70px;">
-            <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-            <a class="pure-menu-heading" href="" style="color: white;text-decoration: none;">Your Site</a>
+            <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">            
+                <a class="pure-menu-heading" href="" style="color: white;text-decoration: none;">
 
-                <ul class="pure-menu-list">
-                    <li class="dropdown pure-menu-item">
-                        <a href="#" class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">Master <span class="caret"></span></a>
+                <!-- Brand Image -->
+                <img src="https://www.google.co.id/logos/doodles/2017/samuel-johnsons-308th-birthday-5999730113904640.2-law.gif" width="24" height="24">
 
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="{{ route('logout') }}">
-                                    Produk
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('logout') }}">
-                                    Cabang
-                                </a>
-                            </li>
-                        </ul>
+                    Your Site</a>
 
-                    </li>
-                    <li class="pure-menu-item">
-                        <a href="#" class="pure-menu-link" style="color: white;text-decoration: none;">Laporan</a>
-                    </li>
-                    <li class="pure-menu-item">
-                        <a href="#" class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">User <span class="caret"></span></a>
+                    <ul class="pure-menu-list">
+                        <li class="dropdown pure-menu-item">
+                            <a href="#" class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">Master <span class="caret"></span></a>
 
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="{{ route('logout') }}">
-                                    Hak Akses
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('logout') }}">
-                                    Daftar User
-                                </a>
-                            </li>
-                        </ul>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{{ route('logout') }}">
+                                        Produk
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('logout') }}">
+                                        Cabang
+                                    </a>
+                                </li>
+                            </ul>
 
-                    </li>
-                    <li class="pure-menu-item">
-                        <a href="#" class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">Pengaturan <span class="caret"></span></a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="#" class="pure-menu-link" style="color: white;text-decoration: none;">Laporan</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="#" class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">User <span class="caret"></span></a>
 
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="{{ route('logout') }}">
-                                    Profile
-                                </a>
-                            </li>                    
-                        </ul>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{{ route('logout') }}">
+                                        Hak Akses
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('logout') }}">
+                                        Daftar User
+                                    </a>
+                                </li>
+                            </ul>
 
-                    </li>
-                    <li class="dropdown pure-menu-item">
-                        <a class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="#" class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">Pengaturan <span class="caret"></span></a>
 
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                Logout
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{{ route('logout') }}">
+                                        Profile
+                                    </a>
+                                </li>                    
+                            </ul>
+
+                        </li>
+                        <li class="dropdown pure-menu-item">
+                            <a class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">
+                                {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                {{ csrf_field() }}
-                            </form>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
+
+        <div style="padding-left: 10px; padding-right: 10px;">
+            @yield('content')
+        </div>
+
     </div>
 
-    <div style="padding-left: 10px; padding-right: 10px;">
-        @yield('content')
-    </div>
-
-</div>
-
-<!-- Scripts -->
-<script src="{{ asset('js/app.js') }}"></script>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
