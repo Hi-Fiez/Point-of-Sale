@@ -6,12 +6,12 @@
         <a href="javascript:;"><i class="ti-home mr5"></i></a>
     </li>
     <li class="active">Pengaturan</li>
-    <li class=""><a href="{!! url('pengaturan/user') !!}">Daftar User</a></li>
+    <li class=""><a href="{!! url('user') !!}">Daftar User</a></li>
     <li class="active">Tambah User</li>
 </ol>
 <section class="panel">
     <div class="panel-body">
-        <form class="form-horizontal" role="form" method="post" action="{{ url('pengaturan/user/add') }}" enctype="multipart/form-data" id="fuser">
+        <form class="form-horizontal" role="form" method="post" action="{{ url('user/add') }}" enctype="multipart/form-data" id="fuser">
             {!! csrf_field() !!}
             <div class="row">
                 <div class="col-md-6">
@@ -59,10 +59,8 @@
                     </div>
                     <div class="form-group" id="postjr">
                         <label for="posting" class="col-sm-3 control-label">Posting Jurnal</label>
-                        <div class="col-sm-9 icheck">
-                            {{--<div class="checkbox icheck">--}}
-                            <label><input name="posting" type="checkbox" value="1" id="posting">&nbsp;</label>
-                            {{--</div>--}}
+                        <div class="col-sm-9 icheck">                            
+                            <label><input name="posting" type="checkbox" value="1" id="posting">&nbsp;</label>                            
                         </div>
                     </div>
                     <div class="form-group">

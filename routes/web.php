@@ -49,6 +49,22 @@ Route::prefix('produk')->group(function () {
 
 });
 
+Route::prefix('kasir')->group(function () {
+
+	Route::get('', function () {
+		return view('kasir.index');
+	});
+
+	Route::get('add', function () {
+		return view('kasir.pembayaran.index');
+	});
+
+	Route::get('edit', function () {
+		return view('kasir.laporan.index');
+	});
+
+});
+
 Route::get('profile', function () {
 	return view('admin.profile.index');
 });
@@ -67,4 +83,4 @@ Route::prefix('user')->group(function () {
 		return view('admin.user.edit');
 	});
 
-});
+});///

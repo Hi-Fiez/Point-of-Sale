@@ -3,12 +3,12 @@
 @section('content')
 <ol class="breadcrumb">
     <li>
-        <a href="javascript:;"><i class="ti-home mr5"></i></a>
+        <a href="javascript:;"><i class="fa fa-home"></i></a>
     </li>
     <li>
         <a href="javascript:;">Master</a>
     </li>
-    <li class="active"><a href="{!! url('master/cabang') !!}">Daftar Cabang</a></li>
+    <li class="active"><a href="{!! url('cabang') !!}">Daftar Cabang</a></li>
     <li class="active">Tambah</li>
 </ol>
 <div class="row">
@@ -19,9 +19,7 @@
                     <div class="box-tab">
                         <ul class="nav nav-tabs">
                             <li class="active"><a href="#umum" data-toggle="tab">Umum</a>
-                            </li>
-                            <li><a href="#akuntansi" data-toggle="tab">Akuntansi</a>
-                            </li>
+                            </li>                            
                             <li><a href="#approve" data-toggle="tab">Hak Akses Approve</a>
                             </li>
                         </ul>
@@ -30,6 +28,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
+                                            <br>
                                             <label for="Kode" class="col-sm-3 control-label">Kode</label>
                                             <div class="col-sm-9">
                                                 <input name="kode" type="text" class="form-control" id="kode" placeholder="Kode" required>
@@ -60,19 +59,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        {{--<div class="form-group">--}}
-                                        {{--<label for="shu" class="col-sm-3 control-label">SHU POS</label>--}}
-                                        {{--<div class="col-sm-9">--}}
-                                        {{--<select name="shu" style="width:100%;" id="shu" data-placeholder="Pilih SHU"  class="form-control" required>--}}
-                                        {{--<option value=""></option>--}}
-                                        {{--@foreach($shu as $value)--}}
-                                        {{--<option value="{!! $value->id !!}">{!! $value->nama !!}</option>--}}
-                                        {{--@endforeach--}}
-                                        {{--</select>--}}
-                                        {{--</div>--}}
-                                        {{--</div>--}}
+                                    <div class="col-md-6">                                        
                                         <div class="form-group">
+                                            <br>
                                             <label for="kode_pos" class="col-sm-3 control-label">Kode Pos</label>
                                             <div class="col-sm-9">
                                                 <input name="kode_pos" type="text" class="form-control" id="kode_pos" placeholder="Kode Pos">
@@ -104,105 +93,19 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="tab-pane fade" id="akuntansi">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="akun-kas" class="col-sm-3 control-label">Akun Kas</label>
-                                            <div class="col-sm-9">
-                                                <select name="akun_kas" style="width:100%;" id="akun-kas" data-placeholder="Pilih Akun Kas" class="form-control" required>                                                    
-
-                                                    <option style="width: 100%" value="id">kode akun - nama akun</option>
-                                                    
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="akun-persediaan" class="col-sm-3 control-label">Akun Persediaan</label>
-                                            <div class="col-sm-9">
-                                                <select name="akun_persediaan" style="width:100%;" id="akun-persediaan" data-placeholder="Pilih Akun Persediaan" class="form-control" required>                             
-                                                    
-                                                    <option value="id">kode akun - nama akun</option>
-                                                    
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="akun-piutang" class="col-sm-3 control-label">Akun Piutang</label>
-                                            <div class="col-sm-9">
-                                                <select name="akun_piutang" style="width:100%;" id="akun-piutang" data-placeholder="Pilih Akun Piutang" class="form-control" required>                                  
-                                                    
-                                                    <option value="id">kode akun - nama akun</option>
-                                                    
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="akun-penjualan" class="col-sm-3 control-label">Akun Penjualan</label>
-                                            <div class="col-sm-9">
-                                                <select name="akun_penjualan" style="width:100%;" id="akun-penjualan" data-placeholder="Pilih Akun Penjualan" class="form-control" required>
-                                                    
-                                                    <option value="id">kode akun - nama akun</option>
-
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="akun-cabang" class="col-sm-3 control-label">Akun Cabang</label>
-                                            <div class="col-sm-9">
-                                                <select name="akun_cabang" style="width:100%;" id="akun-cabang" data-placeholder="Pilih Akun Cabang" class="form-control" required>
-                                                                                                        
-                                                    <option value="id">kode akun - nama akun</option>
-                                                    
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="akun-pendapatan" class="col-sm-3 control-label">Akun Pendapatan</label>
-                                            <div class="col-sm-9">
-                                                <select name="akun_pendapatan" style="width:100%;" id="akun-pendapatan" data-placeholder="Pilih Akun Pendapatan" class="form-control" required>
-                                                                                                        
-                                                    <option value="id">kode akun - nama akun</option>
-                                                    
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="akun-penampungan" class="col-sm-3 control-label">Akun Penampungan Retur</label>
-                                            <div class="col-sm-9">
-                                                <select name="akun_penampungan" style="width:100%;" id="akun-penampungan" data-placeholder="Pilih Akun Penampungan" class="form-control" required>
-                                                                                                        
-                                                    <option value="id">kode akun - nama akun</option>
-                                                    
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="akun-biaya-opname" class="col-sm-3 control-label">Biaya Selisih Opname</label>
-                                            <div class="col-sm-9">
-                                                <select name="akun_biaya_opname" style="width:100%;" id="akun-biaya_opname" data-placeholder="Pilih Akun Biaya opname" class="form-control" required>
-                                                                                                        
-                                                    <option value="id">kode akun - nama akun</option>
-                                                    
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </div>                            
                             <div class="tab-pane fade" id="approve">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-12">
+                                                <br>
                                                 <div class="pull-left">
-                                                    <a href="javascript:void(0)" id="add_row" class="btn btn-sm btn-primary"><i class="ti-plus"> Tambah</i></a>
+                                                    <a href="javascript:void(0)" id="add_row" class="btn btn-sm btn-primary"><i class="fa fa-plus"> Tambah</i></a>
                                                 </div>
                                             </div>
                                         </div>
+                                        <br>
                                         <div class="table-responsive">
                                             <table class="table table-striped table-bordered responsive no-m" id="input-jurnal">
                                                 <thead>

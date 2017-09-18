@@ -3,12 +3,12 @@
 @section('content')
 <ol class="breadcrumb">
     <li>
-        <a href="javascript:;"><i class="ti-home mr5"></i></a>
+        <a href="javascript:;"><i class="fa fa-home"></i></a>
     </li>
     <li>
         <a href="javascript:;">Master</a>
     </li>
-    <li class="active"><a href=" url('master/cabang') ">Daftar Cabang</a></li>
+    <li class="active"><a href=" url('cabang') ">Daftar Cabang</a></li>
     <li class="active">Ubah</li>
     <li class="active">{ cabang->kode }</li>
 </ol>
@@ -103,8 +103,8 @@
                                             <label for="akun-kas" class="col-sm-3 control-label">Akun Kas</label>
                                             <div class="col-sm-9">
                                                 <select name="akun_kas" style="width:100%;" id="akun-kas" data-placeholder="Pilih Akun Kas" class="form-control" required>
-                                                    
-                                                    
+
+
                                                     <option style="width: 100%" value="id" selected=""> value->kode_akun  -  $value->nama_akun </option>
                                                     
                                                 </select>
@@ -114,8 +114,8 @@
                                             <label for="akun-persediaan" class="col-sm-3 control-label">Akun Persediaan</label>
                                             <div class="col-sm-9">
                                                 <select name="akun_persediaan" style="width:100%;" id="akun-persediaan" data-placeholder="Pilih Akun Persediaan" class="form-control" required>
-                                                    
-                                                    
+
+
                                                     <option value="id" selected=""> value->kode_akun  -  value->nama_akun </option>
                                                     
                                                 </select>
@@ -125,8 +125,8 @@
                                             <label for="akun-piutang" class="col-sm-3 control-label">Akun Piutang</label>
                                             <div class="col-sm-9">
                                                 <select name="akun_piutang" style="width:100%;" id="akun-piutang" data-placeholder="Pilih Akun Piutang" class="form-control" required>
-                                                    
-                                                    
+
+
                                                     <option value="id" selected=""> value->kode_akun  -  value->nama_akun </option>
                                                     
                                                 </select>
@@ -136,8 +136,8 @@
                                             <label for="akun-penjualan" class="col-sm-3 control-label">Akun Penjualan</label>
                                             <div class="col-sm-9">
                                                 <select name="akun_penjualan" style="width:100%;" id="akun-penjualan" data-placeholder="Pilih Akun Penjualan" class="form-control" required>
-                                                    
-                                                    
+
+
                                                     <option value="id" selected=""> value->kode_akun  -  value->nama_akun </option>
                                                     
                                                 </select>
@@ -149,8 +149,8 @@
                                             <label for="akun-cabang" class="col-sm-3 control-label">Akun Cabang</label>
                                             <div cla:ss="col-sm-9">
                                                 <select name="akun_cabang" style="width:100%;" id="akun-cabang" data-placeholder="Pilih Akun Cabang" class="form-control" required>
-                                                    
-                                                    
+
+
                                                     <option style="width: 100%" value="id" selected=""> value->kode_akun  -  value->nama_akun </option>
                                                     
                                                 </select>
@@ -160,7 +160,7 @@
                                             <label for="akun-pendapatan" class="col-sm-3 control-label">Akun Pendapatan</label>
                                             <div class="col-sm-9">
                                                 <select name="akun_pendapatan" style="width:100%;" id="akun-pendapatan" data-placeholder="Pilih Akun Pendapatan" class="form-control" required>
-                                                    
+
                                                     <option value="id" selected=""> value->kode_akun  -  value->nama_akun </option>
                                                     
                                                 </select>
@@ -170,7 +170,7 @@
                                             <label for="akun-penampungan" class="col-sm-3 control-label">Akun Penampungan Retur</label>
                                             <div class="col-sm-9">
                                                 <select name="akun_penampungan" style="width:100%;" id="akun-penampungan" data-placeholder="Pilih Akun Penampungan" class="form-control" required>                            
-                                                    
+
                                                     <option value="id" selected=""> value->kode_akun  -  value->nama_akun </option>
                                                     
                                                 </select>
@@ -180,7 +180,7 @@
                                             <label for="akun-biaya-opname" class="col-sm-3 control-label">Biaya Selisih Opname</label>
                                             <div class="col-sm-9">
                                                 <select name="akun_biaya_opname" style="width:100%;" id="akun-biaya_opname" data-placeholder="Pilih Akun Biaya opname" class="form-control" required>
-                                                    
+
                                                     <option value="id" selected=""> value->kode_akun  -  value->nama_akun </option>
                                                     
                                                 </select>
@@ -210,7 +210,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    
+
                                                     <input type="hidden" name="ida[]" value="id">
                                                     <tr id="1">
                                                         <td class="text-center"> 1 </td>

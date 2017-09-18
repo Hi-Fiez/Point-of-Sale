@@ -27,7 +27,7 @@
                             <div class="form-group">
                                 <label for="nama_koperasi" class="col-sm-3 control-label">Nama Koperasi</label>
                                 <div class="col-sm-9">
-                                <input name="nama_koperasi" type="text" class="form-control" id="nama_koperasi" placeholder="Nama koperasi" value=" profil->nama_koperasi ">
+                                    <input name="nama_koperasi" type="text" class="form-control" id="nama_koperasi" placeholder="Nama koperasi" value=" profil->nama_koperasi ">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -63,16 +63,17 @@
                             <div class="form-group">
                                 <label for="foto" class="col-sm-3 control-label">Logo</label>
                                 <div class="col-sm-9">
-                                    <input name="foto" type="file" id="foto" placeholder="Foto">
+                                    <input name="foto" type="file" id="foto" placeholder="Foto" onchange="readURL(this);">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <div class="col-sm-5">
-                                    
+
                                     <!-- at.if.kalo.foto.kosong -->
-                                    <img id="imgfoto"  src="{!! asset('foto/profil/profil->foto') !!}" />
+                                    <!-- <img id="imgfoto"  src="{!! asset('foto/profil/profil->foto') !!}" /> -->
+                                    <img id="imgfoto" src="https://www.google.co.id/logos/doodles/2017/samuel-johnsons-308th-birthday-5999730113904640.2-law.gif">
                                     
                                 </div>
                             </div>
@@ -104,16 +105,14 @@
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                $('#imgfoto').attr('src', e.target.result);
-            }
+                $('#imgfoto')
+                .attr('src', e.target.result)
+                .width(600);
+            };
 
             reader.readAsDataURL(input.files[0]);
         }
     }
-
-    $("#foto").change(function(){
-        readURL(this);
-    });
 
     function validAngka(a)
     {

@@ -6,7 +6,7 @@
         <a href="javascript:;"><i class="ti-home mr5"></i></a>
     </li>
     <li class="active">Pengaturan</li>
-    <li class="active"><a href="{!! url('pengaturan/user') !!}">Daftar User</a></li>
+    <li class="active"><a href="{!! url('user') !!}">Daftar User</a></li>
 </ol>
 <div class="row">
     <div class="col-md-12">
@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="pull-left">
-                            <a href="{{ url('pengaturan/user/add') }}" class="btn btn-sm btn-primary mb15"><i class="ti ti-plus"></i> Tambah</a>
+                            <a href="{{ url('user/add') }}" class="btn btn-sm btn-primary mb15"><i class="ti ti-plus"></i> Tambah</a>
                         </div>
                         <form class="form-inline" role="form" method="get" action="{{ url('pengaturan/user/search') }}">
                             <div class="form-group mr5">
