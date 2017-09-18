@@ -15,55 +15,46 @@
     <div class="col-md-12">
         <section class="panel no-b">
             <div class="panel-body">
-                <form role="form" class="form-horizontal" method="post" enctype="multipart/form-data" action="{!! url('pengaturan/profil') !!}">
-                    <input type="hidden" name="id" value=" profil->id ">
-                    <input type="hidden" name="gambar" value=" profil->foto ">
-                    @if(session('alert'))
-                    <br/><br/>
-                    {!! session('alert') !!}
-                    @endif
+                <form role="form" class="form-horizontal" method="POST" 
+                enctype="multipart/form-data" action="{{url('profile/update')}}">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="nama_koperasi" class="col-sm-3 control-label">Nama Koperasi</label>
+                                <label class="col-sm-3 control-label">Nama Koperasi</label>
                                 <div class="col-sm-9">
-                                    <input name="nama_koperasi" type="text" class="form-control" id="nama_koperasi" placeholder="Nama koperasi" value=" profil->nama_koperasi ">
+                                    <input name="nama" type="text" class="form-control" 
+                                    id="nama_koperasi" placeholder="Nama" value="{{$profile->nama}}">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="kode_koperasi" class="col-sm-3 control-label">Kode Koperasi</label>
+                                <label class="col-sm-3 control-label">Kode Koperasi</label>
                                 <div class="col-sm-9">
-                                    <input name="kode_koperasi" type="text" class="form-control" id="kode_koperasi" placeholder="Kode Koperasi" value=" profil->kode ">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="norekening" class="col-sm-3 control-label">Nomor Rekening</label>
-                                <div class="col-sm-9">
-                                    <input name="nomor_rekening" type="text" class="form-control" id="norekening" placeholder="Nomor Rekening" onkeyup="validAngka(this)" value=" profil->nomor_rekening ">
+                                    <input name="kode" type="text" class="form-control" id="kode_koperasi" placeholder="Kode" value="{{$profile->kode}}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="telepon" class="col-sm-3 control-label">Telepon</label>
                                 <div class="col-sm-9">
-                                    <input name="telepon" type="text" class="form-control" id="telepon" placeholder="Telepon" value=" profil->telepon ">
+                                    <input name="telp" type="text" class="form-control" id="telepon" placeholder="Telepon" value="{{$profile->telp}}">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="alamat_koperasi" class="col-sm-3 control-label">Alamat</label>
+                                <label  class="col-sm-3 control-label">Alamat</label>
                                 <div class="col-sm-9">
-                                    <textarea name="alamat_koperasi" class="form-control" id="alamat_koperasi" placeholder="Alamat" rows="5"> profil->alamat_koperasi </textarea>
+                                    <textarea name="alamat" class="form-control" id="alamat_koperasi" placeholder="Alamat" rows="5">{{$profile->alamat}}</textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="kode_pos" class="col-sm-3 control-label">Kode Pos</label>
                                 <div class="col-sm-9">
-                                    <input name="kode_pos" type="text" class="form-control" id="kode_pos" placeholder="Kode Pos" value=" profil->kode_pos " onkeyup="validAngka(this)">
+                                    <input name="kode_pos" type="text" class="form-control" id="kode_pos" placeholder="Kode Pos" onkeyup="validAngka(this)" 
+                                    value="{{$profile->kode_pos}}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="foto" class="col-sm-3 control-label">Logo</label>
                                 <div class="col-sm-9">
-                                    <input name="foto" type="file" id="foto" placeholder="Foto" onchange="readURL(this);">
+                                    <input name="logo" type="file" id="foto" placeholder="Foto" onchange="readURL(this);">
                                 </div>
                             </div>
                         </div>
@@ -73,7 +64,7 @@
 
                                     <!-- at.if.kalo.foto.kosong -->
                                     <!-- <img id="imgfoto"  src="{!! asset('foto/profil/profil->foto') !!}" /> -->
-                                    <img id="imgfoto" src="https://www.google.co.id/logos/doodles/2017/samuel-johnsons-308th-birthday-5999730113904640.2-law.gif">
+                                    <img id="imgfoto" src="{{url('images/'.$profile->logo)}}">
                                     
                                 </div>
                             </div>
@@ -83,12 +74,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                <input type="hidden" name="id" value="{{$profile->id}}">
                                 <label for="tanggal_lahir" class="col-sm-3 control-label"></label>
                                 <div class="col-sm-2">
                                     <input type="submit" onclick="FunctionLoading()" class="btn btn-primary btn-block" name="save" value="Save">
                                 </div>
                                 <div class="col-sm-2">
-                                    <a href="{!! url('pengaturan/profil') !!}" class="btn btn-danger btn-block">Cancel</a>
+                                    <a href="{{url('profile')}}" class="btn btn-danger btn-block">Cancel</a>
                                 </div>
                             </div>
                         </div>

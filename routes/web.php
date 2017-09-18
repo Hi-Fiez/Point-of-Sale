@@ -11,6 +11,16 @@
 |
 */
 
+Route::get('/images/{filename}', function ($filename)
+{
+	$path = public_path('images') . '/' . $filename;
+	$file = File::get($path);
+	$type = File::mimeType($path);
+	$response = Response::make($file);
+	$response->header("Content-Type", $type);
+	return $response;
+});
+
 Route::get('/', 'HomeController@index');
 
 Auth::routes();
@@ -73,6 +83,16 @@ Route::group(['middleware' => 'admin'], function()
 	Route::get('edit', function () {
 		return view('admin.user.edit');
 	});
+	});
+
+});
+
+Route::group(['prefix' => 'profile'] , function () {
+Route::group(['middleware' => 'admin'], function()
+{
+	Route::get('{id}','Auth\Profil\ProfileController@index');
+	Route::post('update','Auth\Profil\ProfileController@update');
+
 	});
 
 });

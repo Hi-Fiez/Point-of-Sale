@@ -242,12 +242,12 @@
 
                 <ul class="dropdown-menu" role="menu">
                     <li>
-                        <a href="{{ route('logout') }}">
+                        <a href="{{url('produk')}}">
                             Produk
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('logout') }}">
+                        <a href="{{url('cabang')}}">
                             Cabang
                         </a>
                     </li>
@@ -279,7 +279,7 @@
 
                 <ul class="dropdown-menu" role="menu">
                     <li>
-                        <a href="{{ route('logout') }}">
+                        <a href="{{url('profile/1')}}">
                             Profile
                         </a>
                     </li>                    

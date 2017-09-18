@@ -15,16 +15,16 @@ class CreateCabangsTable extends Migration
     {
         Schema::create('cabangs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('kode');
-            $table->string('nama_cabang');
-            $table->text('alamat');
-            $table->string('kota');
-            $table->string('provinsi');
-            $table->integer('kodepos');
-            $table->integer('telp');
-            $table->integer('fax');
-            $table->string('bank');
-            $table->integer('rek');
+            $table->string('kode')->nullable();
+            $table->string('nama_cabang')->nullable();
+            $table->text('alamat')->nullable();
+            $table->string('kota')->nullable();
+            $table->string('provinsi')->nullable();
+            $table->integer('kodepos')->nullable();
+            $table->integer('telp')->nullable();
+            $table->integer('fax')->nullable();
+            $table->string('bank')->nullable();
+            $table->integer('rek')->nullable();
             $table->timestamps();
         });
     }

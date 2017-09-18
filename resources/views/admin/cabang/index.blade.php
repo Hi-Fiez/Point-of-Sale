@@ -8,7 +8,7 @@
     <li>
         <a href="javascript:;">Master</a>
     </li>
-    <li class="active"><a href="{!! url('cabang') !!} ">Daftar Cabang</a></li>
+    <li class="active">Daftar Cabang</li>
 </ol>
 <div class="row">
     <div class="col-md-12">
@@ -47,19 +47,13 @@
                             &nbsp;&nbsp;&nbsp;
                             <input class="pure-input-rounded" name="query" type="text" placeholder="Cari cabang" id="cari">
                             <input type="hidden" name="search" value="1">
-                            <button type="submit" class="pure-button pure-button-primary">
+                            <button type="submit" class="pure-button pure-button-primary pure-input-rounded">
                                 <i class="fa fa-search">
-                                    &nbsp;Cari
                                 </i>
                             </button>
                         </form>
                     </div>
                 </div>                
-
-                @if(session('alert'))
-                <br/><br/>
-                {!! session('alert') !!}
-                @endif
                 <div class="row">
                     <p></p>
                     <div class="col-md-12">
@@ -113,22 +107,4 @@
         </section>
     </div>
 </div>
-
-<script>
-    function konfirm(id) {
-        swal({
-            title: "Apakah Anda Yakin?",
-            text: "Data Barang dan Data Customer yg ada dalam Cabang ini juga akan Terhapus !",
-            type: "warning",
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',   cancelButtonColor: '#d33',
-            confirmButtonText: "Yes, delete it!",
-            closeOnConfirm: false
-        }).then(function() {
-            swal("Deleted!", "Your imaginary file has been deleted.", "success");
-            location.href =  "{{ url('master/cabang') }}/" + id + "/destroy";
-        })
-
-    }
-</script>
 @endsection
