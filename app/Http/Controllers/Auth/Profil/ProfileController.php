@@ -8,6 +8,8 @@ use Auth;
 use \App\Profile;
 use Illuminate\Support\Facades\Input;
 
+/*tai*/
+
 class ProfileController extends Controller
 {
 	public function __construct()

@@ -3,7 +3,7 @@
 @section('content')
 <ol class="breadcrumb">
     <li>
-        <a href="javascript:;"><i class="fa fa-home"></i></a>
+        <a href="javascript:;"><i class="ti-home mr5"></i></a>
     </li>
     <li>
         <a href="javascript:;">Pengaturan</a>
@@ -20,14 +20,14 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Nama Koperasi</label>
+                                <label class="col-sm-3 control-label">Nama</label>
                                 <div class="col-sm-9">
                                     <input name="nama" type="text" class="form-control" 
                                     id="nama_koperasi" placeholder="Nama" value="{{$profile->nama}}">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Kode Koperasi</label>
+                                <label class="col-sm-3 control-label">Kode</label>
                                 <div class="col-sm-9">
                                     <input name="kode" type="text" class="form-control" id="kode_koperasi" placeholder="Kode" value="{{$profile->kode}}">
                                 </div>
@@ -57,7 +57,6 @@
                                     <input name="logo" type="file" id="foto" placeholder="Foto" onchange="readURL(this);">
                                 </div>
                             </div>
-<<<<<<< HEAD
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
@@ -73,8 +72,6 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-=======
->>>>>>> 47e70724ae002ceb24bb2f25302587af32bcf48e
                             <div class="form-group">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <input type="hidden" name="id" value="{{$profile->id}}">
@@ -85,21 +82,13 @@
                                 <div class="col-sm-2">
                                     <a href="{{url('profile')}}" class="btn btn-danger btn-block">Cancel</a>
                                 </div>
-                            </div>                            
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <!-- at.if.kalo.foto.kosong -->
-                                <!-- <img id="imgfoto"  src="{!! asset('foto/profil/profil->foto') !!}" /> --><center>
-                                <img class="pure-img" id="imgfoto" src="https://www.google.co.id/logos/doodles/2017/samuel-johnsons-308th-birthday-5999730113904640.2-law.gif">
-                            </center>
+                            </div>
                         </div>
                     </div>
-                </div>                    
-            </form>
-        </div>
-    </section>
-</div>
+                </form>
+            </div>
+        </section>
+    </div>
 </div>
 
 <script>
@@ -110,8 +99,7 @@
             reader.onload = function (e) {
                 $('#imgfoto')
                 .attr('src', e.target.result)
-                .width(300)
-                .height(300);
+                .width(600);
             };
 
             reader.readAsDataURL(input.files[0]);

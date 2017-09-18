@@ -7,7 +7,7 @@ use Illuminate\Database\Migrations\Migration;
 class CreateProfilesTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrationss.
      *
      * @return void
      */

@@ -28,7 +28,6 @@
     line-height: 1.7em;
     color: #7f8c8d;
     font-size: 13px;
-    overflow-x:hidden;
 }
 
 /*
@@ -128,69 +127,41 @@
 
 </head>
 <body>
-    <div id="app">     
-        <div class="header" style="padding-bottom: 70px;">
-            <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">            
-                <a class="pure-menu-heading" href="" style="color: white;text-decoration: none;">
+    <div id="app">
+        <!-- <nav class="navbar button-secondary navbar-static-top">
+            <div class="container">
+                <div class="navbar-header"> -->
 
-                <!-- Brand Image -->
-                <img src="https://www.google.co.id/logos/doodles/2017/samuel-johnsons-308th-birthday-5999730113904640.2-law.gif" width="24" height="24">
+                    <!-- Collapsed Hamburger -->
+                    <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button> -->
 
-                    Your Site</a>
+                    <!-- Branding Image -->
+                <!--     <a class="navbar-brand" href="{{ url('/') }}" style="color: white;">
+                        {{ config('app.name', 'Laravel') }}
+                    </a>
+                </div>
 
-                    <ul class="pure-menu-list">
-                        <li class="dropdown pure-menu-item">
-                            <a class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">Master <span class="caret"></span></a>
+                <div class="collapse navbar-collapse" id="app-navbar-collapse"> -->
+                    <!-- Left Side Of Navbar -->
+                    <!-- <ul class="nav navbar-nav">
+                        &nbsp;
+                    </ul> -->
 
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="{{ url('produk') }}">
-                                        Produk
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ url('cabang') }}">
-                                        Cabang
-                                    </a>
-                                </li>
-                            </ul>
-
-                        </li>
-                        <li class="pure-menu-item">
-                            <a class="pure-menu-link" style="color: white;text-decoration: none;">Laporan</a>
-                        </li>
-                        <li class="pure-menu-item">
-                            <a href="#" class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">User <span class="caret"></span></a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="{{ route('logout') }}">
-                                        Hak Akses
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ url('user') }}">
-                                        Daftar User
-                                    </a>
-                                </li>
-                            </ul>
-
-                        </li>
-                        <li class="pure-menu-item">
-                            <a class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">Pengaturan <span class="caret"></span></a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="{{ url('profile') }}">
-                                        Profile
-                                    </a>
-                                </li>                    
-                            </ul>
-
-                        </li>
-                        <li class="dropdown pure-menu-item">
-                            <a class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                    <!-- Right Side Of Navbar -->
+                    <!-- <ul class="nav navbar-nav navbar-right"> -->
+                    <!-- Authentication Links -->
+                        <!-- @guest
+                        <li><a href="{{ route('login') }}" style="color: white;">Login</a></li>
+                        <li><a href="{{ route('register') }}" style="color: white;">Register</a></li>
+                        @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;">
+                                Master <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
@@ -200,14 +171,9 @@
                                     document.getElementById('logout-form').submit();">
                                     Logout
                                 </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
                             </li>
                         </ul>
                     </li>
-<<<<<<< HEAD
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;">
@@ -305,17 +271,12 @@
                             Daftar User
                         </a>
                     </li>
-=======
->>>>>>> 47e70724ae002ceb24bb2f25302587af32bcf48e
                 </ul>
-            </div>
-        </div>
 
-        <div style="padding-left: 15px; padding-right: 5px;">
-            @yield('content')
-        </div>
+            </li>
+            <li class="pure-menu-item">
+                <a href="#" class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="text-decoration: none;">Pengaturan <span class="caret"></span></a>
 
-<<<<<<< HEAD
                 <ul class="dropdown-menu" role="menu">
                     <li>
                         <a href="{{url('profile/1')}}">
@@ -323,11 +284,38 @@
                         </a>
                     </li>                    
                 </ul>
-=======
-    </div>
->>>>>>> 47e70724ae002ceb24bb2f25302587af32bcf48e
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+            </li>
+            <li class="dropdown pure-menu-item">
+                <a class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">
+                    {{ Auth::user()->name }} <span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</div>
+
+<div style="padding-left: 10px; padding-right: 10px;">
+    @yield('content')
+</div>
+
+</div>
+
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
