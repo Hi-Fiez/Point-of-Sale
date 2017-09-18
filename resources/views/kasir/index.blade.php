@@ -710,10 +710,8 @@ $("#carikode").click(function()
 {
 
     var norefff = $('#barcode').val();
-
     if (norefff=="")
     {
-
         location.href=" {{ url('pos/penjual/dataproduk') }}";
 
     }
@@ -721,8 +719,8 @@ $("#carikode").click(function()
     {
         location.href =  "{{ url('pos/penjualan') }}" + "/" + norefff;
     }
-
 });
+
 $(function(){
     $("#Eqtyvalue->id").keyup(function (e) {
         if (e.keyCode == 13) {
