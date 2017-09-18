@@ -3,7 +3,7 @@
 @section('content')
 <ol class="breadcrumb">
     <li>
-        <a href="javascript:;"><i class="ti-home mr5"></i></a>
+        <a href="javascript:;"><i class="fa fa-home"></i></a>
     </li>
     <li>
         <a href="javascript:;">Pengaturan</a>
@@ -57,6 +57,7 @@
                                     <input name="logo" type="file" id="foto" placeholder="Foto" onchange="readURL(this);">
                                 </div>
                             </div>
+<<<<<<< HEAD
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
@@ -72,6 +73,8 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
+=======
+>>>>>>> 47e70724ae002ceb24bb2f25302587af32bcf48e
                             <div class="form-group">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <input type="hidden" name="id" value="{{$profile->id}}">
@@ -82,13 +85,21 @@
                                 <div class="col-sm-2">
                                     <a href="{{url('profile')}}" class="btn btn-danger btn-block">Cancel</a>
                                 </div>
-                            </div>
+                            </div>                            
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- at.if.kalo.foto.kosong -->
+                                <!-- <img id="imgfoto"  src="{!! asset('foto/profil/profil->foto') !!}" /> --><center>
+                                <img class="pure-img" id="imgfoto" src="https://www.google.co.id/logos/doodles/2017/samuel-johnsons-308th-birthday-5999730113904640.2-law.gif">
+                            </center>
                         </div>
                     </div>
-                </form>
-            </div>
-        </section>
-    </div>
+                </div>                    
+            </form>
+        </div>
+    </section>
+</div>
 </div>
 
 <script>
@@ -99,7 +110,8 @@
             reader.onload = function (e) {
                 $('#imgfoto')
                 .attr('src', e.target.result)
-                .width(600);
+                .width(300)
+                .height(300);
             };
 
             reader.readAsDataURL(input.files[0]);

@@ -3,7 +3,7 @@
 @section('content')
 <ol class="breadcrumb">
     <li>
-        <a href="javascript:;"><i class="ti-home mr5"></i></a>
+        <a href="javascript:;"><i class="fa fa-home"></i></a>
     </li>
     <li class="active">Pengaturan</li>
     <li class="active"><a href="{!! url('user') !!}">Daftar User</a></li>
@@ -36,7 +36,7 @@
                             <tr class="bg-color">
                                 <th class="text-center" >No</th>
                                 <th class="text-center">Username</th>
-                                <th class="text-center">Hak Akses</th>
+                                <th class="te,xt-center">Hak Akses</th>
                                 <th class="text-center">Status</th>
                                 <th class="text-center">&nbsp;</th>
                             </tr>

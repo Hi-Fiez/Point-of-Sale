@@ -3,7 +3,7 @@
 @section('content')
 <ol class="breadcrumb">
     <li>
-        <a href="javascript:;"><i class="ti-home mr5"></i></a>
+        <a href="javascript:;"><i class="fa fa-home"></i></a>
     </li>
     <li class="active">Pengaturan</li>
     <li class=""><a href="{!! url('pengaturan/user') !!}">Daftar User</a></li>

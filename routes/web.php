@@ -87,6 +87,7 @@ Route::group(['middleware' => 'admin'], function()
 
 });
 
+<<<<<<< HEAD
 Route::group(['prefix' => 'profile'] , function () {
 Route::group(['middleware' => 'admin'], function()
 {
@@ -98,5 +99,12 @@ Route::group(['middleware' => 'admin'], function()
 });
 
 Route::get('/kasir', function(){
+=======
+Route::get('kasir', function(){
+>>>>>>> 47e70724ae002ceb24bb2f25302587af32bcf48e
 	return view('kasir.index');
+});
+
+Route::get('profile', function(){
+	return view('admin.profile.index');
 });
