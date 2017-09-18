@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+<style type="text/css">
+    body {
+        overflow-y:none;
+    }
+</style>
 <ol class="breadcrumb">
     <li>
         <a href="javascript:;"><i class="fa fa-home"></i></a>

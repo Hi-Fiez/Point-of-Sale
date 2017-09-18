@@ -66,7 +66,7 @@
                         <div class="table-responsive no-border">
                             <table class="pure-table pure-table-horizontal table-striped" style="width: 100%">
                                 <thead>
-                                    <tr>
+                                    <tr bgcolor="#42b8dd" style="color: white">
                                         <th class="text-center">No</th>
                                         <th>Kode</th>
                                         <th>Nama Cabang</th>
