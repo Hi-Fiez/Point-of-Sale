@@ -1,5 +1,6 @@
 @extends('layouts.error')
 
+@section('title', '404 - THE PAGE WAS NOT FOUND')
 @section('content')
 <div id="clouds">
 	<div class="cloud x1"></div>

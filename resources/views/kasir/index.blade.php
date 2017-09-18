@@ -11,7 +11,7 @@
 <body>    
 </body>
 <body id="app">
-    <div style="background: #369;width:100%;height:20%;"></div>
+    <div style="background: #369;width:100%;height:30%;"></div>
     <div style="background: #E0E0E0;width:100%;height:648px"></div>
     <div class="lightbox" style="background: #ecf0f1;position: absolute;height:1000px;width:93%;margin-top:-50%;margin-left: 3.5%;">
         <div style="width:100%; height:100%; overflow:auto; margin: 0 auto; position:absolute; 

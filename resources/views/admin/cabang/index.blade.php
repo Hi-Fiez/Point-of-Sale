@@ -84,7 +84,7 @@
                                         <td>Alamat</td>
                                         <td>0987654321</td>
                                         <td>1234567890</td>                     
-                                        <td align="center" style="width: 8.5%;">
+                                        <td align="center">
                                             <a data-toggle="tooltip" data-placement="left" title="Ubah">
                                                 <button class="button-secondary pure-button">
                                                     <i class="fa fa-pencil"></i>

@@ -1,5 +1,6 @@
 @extends('layouts.error')
 
+@section('title', '403 - GO BACK')
 @section('content')
 <div id="clouds">
 	<div class="cloud x1"></div>
