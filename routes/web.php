@@ -77,3 +77,6 @@ Route::group(['middleware' => 'admin'], function()
 
 });
 
+Route::get('/kasir', function(){
+	return view('kasir.index');
+});
