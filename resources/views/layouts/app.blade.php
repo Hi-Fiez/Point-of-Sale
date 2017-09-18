@@ -140,16 +140,16 @@
 
                     <ul class="pure-menu-list">
                         <li class="dropdown pure-menu-item">
-                            <a href="#" class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">Master <span class="caret"></span></a>
+                            <a class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">Master <span class="caret"></span></a>
 
                             <ul class="dropdown-menu" role="menu">
                                 <li>
-                                    <a href="{{ route('logout') }}">
+                                    <a href="{{ url('produk') }}">
                                         Produk
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('logout') }}">
+                                    <a href="{{ url('cabang') }}">
                                         Cabang
                                     </a>
                                 </li>
@@ -157,7 +157,7 @@
 
                         </li>
                         <li class="pure-menu-item">
-                            <a href="#" class="pure-menu-link" style="color: white;text-decoration: none;">Laporan</a>
+                            <a class="pure-menu-link" style="color: white;text-decoration: none;">Laporan</a>
                         </li>
                         <li class="pure-menu-item">
                             <a href="#" class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">User <span class="caret"></span></a>
@@ -169,7 +169,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('logout') }}">
+                                    <a href="{{ url('user') }}">
                                         Daftar User
                                     </a>
                                 </li>
@@ -177,11 +177,11 @@
 
                         </li>
                         <li class="pure-menu-item">
-                            <a href="#" class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">Pengaturan <span class="caret"></span></a>
+                            <a class="dropdown-toggle pure-menu-link" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white;text-decoration: none;">Pengaturan <span class="caret"></span></a>
 
                             <ul class="dropdown-menu" role="menu">
                                 <li>
-                                    <a href="{{ route('logout') }}">
+                                    <a href="{{ url('profile') }}">
                                         Profile
                                     </a>
                                 </li>                    
