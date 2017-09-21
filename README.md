@@ -7,7 +7,7 @@
 <img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License">
 </p>
 
-# Point-of-Sale
+# Point of Sale
 
 This does not stop here, until now Forked to https://github.com/arm02/point-of-sale
 
