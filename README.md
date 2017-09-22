@@ -9,7 +9,7 @@
 
 # Point of Sale
 
-This does not stop here, until now Forked to https://github.com/arm02/point-of-sale
+This does not stop here, until now Forked here (https://github.com/arm02/point-of-sale)
 
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
 
